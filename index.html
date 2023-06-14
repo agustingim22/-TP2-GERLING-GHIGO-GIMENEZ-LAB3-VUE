@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <img src="undefined - Imgur.png" alt="">
+                <input type="text" id="usuario" v-model="usuario" placeholder="  Ingrese su Usuario...">
+            </header>
+            <main>
+            <Perfil></Perfil>       
+            <br>
+            <Publicacion :usuario="usuario"></Publicacion>
+            </main>
+        </div>
+        <script src="vue.js"></script>
+        <script src="./Componentes/Publicacion.js"></script>
+        <script src="./Componentes/Perfil.js"></script>
+        <script> const mountedApp = app.mount('#app')</script>
+    </body>
+</html>
